@@ -5,10 +5,12 @@ import com.example.employeeservice.entity.Employee;
 import com.example.employeeservice.model.EmployeeVo;
 import com.example.employeeservice.repository.EmployeeRepository;
 import com.example.employeeservice.service.EmployeeService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
@@ -16,6 +18,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public EmployeeVo getEmployeeRecord(Long id) {
+
+        log.info("Getting employee info based on Id passed");
         Employee employee = employeeRepository.getEmployeeRecord(id);
         return new EmployeeVo(employee.getId(), employee.getFirstName()
                 , employee.getLastName(), employee.getDesignation()
