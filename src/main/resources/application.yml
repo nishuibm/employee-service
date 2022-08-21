@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/xe
+
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: system
+    password: password
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 30000
+      max-lifetime: 20000
+      connection-timeout: 30000
+      pool-name: HikariPoolBooks
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect
+        hbm2ddl:
+          auto: validate
+        show_sql: true
+  application:
+    name: employee-service
+
+server:
+  port: 8082
