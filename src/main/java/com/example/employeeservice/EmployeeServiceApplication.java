@@ -11,6 +11,8 @@ public class EmployeeServiceApplication {
 
 	public static void main(String[] args) {
 		System.out.println("This is a another 1 test commit");
+		System.out.println("This is a another 2 test commit");
+		System.out.println("Another comment");
 		SpringApplication.run(EmployeeServiceApplication.class, args);
 	}
 
