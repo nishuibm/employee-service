@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class EmployeeServiceApplication {
 
 	public static void main(String[] args) {
-		System.out.println("This is a 1st test commit");
+		System.out.println("This is a 3rd test commit");
 		SpringApplication.run(EmployeeServiceApplication.class, args);
 	}
 
